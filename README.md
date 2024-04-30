@@ -1,10 +1,13 @@
 # Preppin-Data-2023-Week-5-DSB-Ranking
 
-#### Link to Challenge
+![image](https://github.com/JP852/Preppin-Data-2023-Week-5-DBS-Ranking/assets/142391590/f045ba7a-d1b3-4942-9a65-c3f179c26d09)
+
+
+## Link to Challenge
 
 https://preppindata.blogspot.com/2023/02/2023-week-5-dsb-ranking.html
 
-#### SQL Techniques Used
+## SQL Techniques Used
 
 - CTEs
 - Table Joins
