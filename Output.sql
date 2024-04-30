@@ -14,9 +14,10 @@ SELECT
     SUM(VALUE) AS SUM_OF_VALUE
     ,IFF(LENGTH(transaction_code) = 15,LEFT(transaction_code,3),LEFT(transaction_code,2)) AS BANK
     ,MONTHNAME(DATE(transaction_date,'dd/MM/yyyy hh24:mi:ss')) as MONTH
-    ,RANK() OVER(PARTITION BY MONTHNAME(DATE(transaction_date,'dd/MM/yyyy hh24:mi:ss')) ORDER BY SUM(value) DESC)  AS RANK
-      FROM PD2023_WK01
-        GROUP BY BANK,MONTH)
+    ,RANK() OVER(PARTITION BY MONTHNAME(DATE(transaction_date,'dd/MM/yyyy hh24:mi:ss')) 
+      ORDER BY SUM(value) DESC)  AS RANK
+        FROM PD2023_WK01
+          GROUP BY BANK,MONTH)
     ,AVG_RANK AS(
 SELECT 
     BANK
